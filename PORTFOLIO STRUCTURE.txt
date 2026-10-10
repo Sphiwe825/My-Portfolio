@@ -1,0 +1,58 @@
+PORTFOLIO STRUCTURE
+
+1. NAVBAR
+- Logo / Name
+- Links:
+  - Home
+  - About
+  - Skills
+  - Projects
+  - Experience
+  - Contact
+
+2. HERO SECTION
+- Name
+- Title (e.g. Full Stack Developer)
+- Short tagline
+- Call-to-action buttons:f
+  - View Projects
+  - Contact Me
+
+3. ABOUT SECTION
+- Profile image
+- Short bio
+- Skills overview
+
+4. SKILLS SECTION
+- Frontend skills
+- Backend skills
+- Tools
+- Icons or progress indicators
+
+5. PROJECTS SECTION
+- Project cards:
+  - Image
+  - Title
+  - Description
+  - Tech stack
+  - Live link
+  - GitHub link
+
+6. EXPERIENCE / EDUCATION
+- Timeline format
+- Job / School name
+- Duration
+- Description
+
+7. CONTACT SECTION
+- Contact form:
+  - Name
+  - Email
+  - Message
+- Social links:
+  - GitHub
+  - LinkedIn
+
+8. FOOTER
+- Copyright
+- Social links
