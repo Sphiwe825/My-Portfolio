@@ -3,7 +3,6 @@ import Projects from "./component/Projects"
 import Skills from "./component/Skills"
 import Hero from "./page/Hero"
 
-
 function App() {
     return (
        <>
