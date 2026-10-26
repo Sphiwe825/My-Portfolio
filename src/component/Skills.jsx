@@ -1,47 +1,47 @@
-import { FaReact } from "react-icons/fa6"
-import SkillsCard from "../data/SkillsCard"
+const skillGroups = [
+    {
+        number: "01",
+        title: "Backend",
+        skills: ["Java", "Spring Boot", "REST APIs"],
+    },
+    {
+        number: "02",
+        title: "Data",
+        skills: ["MySQL", "SQL"],
+    },
+    {
+        number: "03",
+        title: "Tools & frontend",
+        skills: ["Git", "React", "JavaScript"],
+    },
+]
 
-export default function Skills(){
-    const skillsData = [
-        {
-            id: 1,
-            stack: "Frontend",
-            name: "ReactJs",
-            icon: <FaReact />
-        },
-        {
-            id: 1,
-            stack: "Frontend",
-            name: "ReactJs",
-            icon: <FaReact />
-        },
-        {
-            id: 1,
-            stack: "Backend",
-            name: "ReactJs",
-            icon: <FaReact />
-        }
-    ]
-
-    const frontendSkills = skillsData.filter((s) => s.stack == "Frontend")
-    const backendSkills = skillsData.filter((s) => s.stack == "Backend")
-    return(
-        <>
-        <div className="skills-cover">
-            <div className="fronted-skills">
-                <h2>Fronted</h2>
-                {frontendSkills.map((s) =>(
-                    <SkillsCard key={s.id} name={s.name} icon={s.icon} stack={s.stack}/>
-                ))}
+export default function Skills() {
+    return (
+        <section className="skills-section" id="skills">
+            <div className="section-shell">
+                <div className="section-heading skills-heading">
+                    <div>
+                        <p className="eyebrow">MY TOOLKIT</p>
+                        <h2>Tools I&apos;m growing with.</h2>
+                    </div>
+                    <p>
+                        A practical foundation across backend development, databases,
+                        and the tools that bring applications together.
+                    </p>
+                </div>
+                <div className="skill-grid">
+                    {skillGroups.map(({ number, title, skills }) => (
+                        <article className="skill-card" key={title}>
+                            <span className="skill-number">{number}</span>
+                            <h3>{title}</h3>
+                            <div className="skill-tags">
+                                {skills.map((skill) => <span key={skill}>{skill}</span>)}
+                            </div>
+                        </article>
+                    ))}
+                </div>
             </div>
-
-            <div className="backend-skills">
-                <h2>Backend</h2>
-                {backendSkills.map((s) => (
-                    <SkillsCard key={s.id} name={s.name} icon={s.icon} stack={s.stack}/>
-                ))}
-            </div>
-        </div>
-        </>
+        </section>
     )
 }

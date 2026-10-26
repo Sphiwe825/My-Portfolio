@@ -1,61 +1,29 @@
-import { FaCode, FaHouse, FaStar } from "react-icons/fa6"
-import "../styles/navbar.css"
-export default function NavBar(){
+import { FaCode } from "react-icons/fa6"
 
-    const navLinks = [
-        {
-            id: 1,
-            path: "/",
-            icon: <FaHouse />,
-            text: "Home"
-        },
-        {
-            id: 2,
-            path: "/",
-            icon: <FaHouse />,
-            text: "About"
+const navLinks = [
+    { href: "#about", label: "About" },
+    { href: "#skills", label: "Skills" },
+    { href: "#projects", label: "Projects" },
+    { href: "#contact", label: "Contact" },
+]
 
-        },
-        {
-            id: 3,
-            path: "/",
-            icon: <FaHouse />,
-            text: "Certificates"
-        },
-        {
-            id: 4,
-            path: "/",
-            icon: <FaHouse />,
-            text: "Skills"
-        },
-        {
-            id: 5,
-            path: "/",
-            icon: <FaHouse />,
-            text: "Projects"
-        },
-        {
-            id: 6,
-            path: "",
-            icon: <FaStar />,
-            text: "Exprience"
-        }
-    ]
-    return(
-        <>
-        <header className="header">
-            <div className="logo-text">
-                <p className="text"><FaCode /> Sphiwe.R.Khubayi</p>
-            </div>
-
-            <div className="navigation-links">
-                <nav className="nav-links">
-                    {navLinks.map((e) => (
-                        <a key={e.id} href={e.path}> {e.icon} {e.text}</a>
+export default function NavBar() {
+    return (
+        <header className="site-header">
+            <div className="nav-shell">
+                <a className="brand" href="#home" aria-label="Sphiwe Khubayi home">
+                    <span className="brand-mark"><FaCode aria-hidden="true" /></span>
+                    <span>Sphiwe<span className="brand-dot">.</span></span>
+                </a>
+                <nav className="nav-links" aria-label="Main navigation">
+                    {navLinks.map(({ href, label }) => (
+                        <a key={href} href={href}>{label}</a>
                     ))}
                 </nav>
+                <a className="nav-cta" href="#contact">
+                    Let&apos;s talk <span aria-hidden="true">↗</span>
+                </a>
             </div>
         </header>
-        </>
     )
 }

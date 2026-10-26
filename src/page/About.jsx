@@ -1,24 +1,37 @@
-import sphiwe from "../assets/sphiwe.jpeg"
+import { FaGraduationCap } from "react-icons/fa6"
+
 export default function About() {
     return (
-        <>
-            <div className="about-grid">
-                <article>
-                    <div className="bio-header">
-                        <h2>Hello There</h2>
-                        <h3>I'm Sphiwe Rodney Khubayi</h3>
-                    </div>
-                    <div className="bio-text">
-                        <p>Curently a 2nd year student a Sol Plaatjei University studying Diploma In ICT Application Development</p>
-                        <p>I'm a young passionate Frontend/Backend Developer utilising Java, SpringBoot Framework and ReactJs</p>
-                    </div>
-                </article>
-
-                <div className="hero-image">
-                    <img src={sphiwe} alt="Sphiwe's Image" />
-                </div>
+        <section className="about-section section-shell" id="about">
+            <div className="section-heading">
+                <p className="eyebrow">A LITTLE ABOUT ME</p>
+                <h2>Curiosity is where good code begins.</h2>
             </div>
+            <div className="about-layout">
+                <p className="about-lead">
+                    I&apos;m an aspiring software developer who loves solving problems
+                    and learning how the pieces of an application fit together.
+                </p>
+                <div className="about-detail">
+                    <p>
+                        My main interest is backend development with Java and Spring
+                        Boot: designing clear APIs, working with data, and building
+                        services that are reliable and easy to maintain. I also enjoy
+                        exploring the frontend so I can better understand the whole
+                        product.
+                    </p>
+                    <div className="education-card">
+                        <span className="education-icon"><FaGraduationCap aria-hidden="true" /></span>
+                        <span>
+                            <small>Currently studying</small>
+                            <strong>Diploma in ICT (Application Development)</strong>
+                            <small>Sol Plaatje University</small>
+                        </span>
+                    </div>
+                </div>
 
-        </>
+                
+            </div>
+        </section>
     )
 }
