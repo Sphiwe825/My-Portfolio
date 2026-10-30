@@ -1,9 +1,11 @@
 import NavBar from "./component/NavBar"
 import Projects from "./component/Projects"
 import Skills from "./component/Skills"
+import Certificate from "./component/Certificate"
 import About from "./page/About"
 import Hero from "./page/Hero"
 import resume from "./assets/Sphiwe Rodney Khubayi.pdf"
+
 
 function App() {
     return (
@@ -14,6 +16,7 @@ function App() {
                 <About />
                 <Skills />
                 <Projects />
+                <Certificate />
                 <section className="contact-section" id="contact">
                     <div className="section-shell contact-panel">
                         <p className="eyebrow">GET IN TOUCH</p>
